@@ -9,11 +9,11 @@
  Invenio-SimpleModule
 ======================
 
-.. image:: https://img.shields.io/travis/mhaya/invenio-simplemodule.svg
-        :target: https://travis-ci.org/mhaya/invenio-simplemodule
+.. image:: https://travis-ci.com/mhaya/invenio-simplemodule.svg?branch=master 
+        :target: https://travis-ci.com/mhaya/invenio-simplemodule
 
-.. image:: https://img.shields.io/coveralls/mhaya/invenio-simplemodule.svg
-        :target: https://coveralls.io/r/mhaya/invenio-simplemodule
+.. image:: https://coveralls.io/repos/github/mhaya/invenio-simplemodule/badge.svg?branch=master
+        :target: https://coveralls.io/github/mhaya/invenio-simplemodule?branch=master
 
 .. image:: https://img.shields.io/github/tag/mhaya/invenio-simplemodule.svg
         :target: https://github.com/mhaya/invenio-simplemodule/releases
