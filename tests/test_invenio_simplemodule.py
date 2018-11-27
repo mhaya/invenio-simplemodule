@@ -33,6 +33,15 @@ def test_init():
     ext.init_app(app)
     assert 'invenio-simplemodule' in app.extensions
 
+    app = Flask('testapp')
+    ext = InvenioSimpleModule()
+    app.config.update(
+        BASE_TEMPLATE='invenio_theme/page.html'
+    )
+    ext.init_app(app)
+    assert app.config['SIMPLEMODULE_BASE_TEMPLATE'] \
+        == app.config['BASE_TEMPLATE']
+
 
 def test_view(base_client):
     """Test view."""
