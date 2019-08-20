@@ -15,6 +15,7 @@ from __future__ import absolute_import, print_function
 
 from flask import Blueprint, render_template
 from flask_babelex import gettext as _
+from invenio_app.factory import instance_path, static_folder
 import os
 
 blueprint = Blueprint(
