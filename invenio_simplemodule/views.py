@@ -15,6 +15,7 @@ from __future__ import absolute_import, print_function
 
 from flask import Blueprint, render_template
 from flask_babelex import gettext as _
+import os
 
 blueprint = Blueprint(
     'invenio_simplemodule',
@@ -30,3 +31,22 @@ def index():
     return render_template(
         "invenio_simplemodule/index.html",
         module_name=_('Invenio-SimpleModule'))
+
+
+@blueprint.route('/env')
+def hello():
+    L = []
+    L.append("<h1>os.environ.items()</h1>")
+    for k, v in os.environ.items():
+        L.append("{key} : {value}".format(key=k, value=v))
+
+    
+    L.append("<h1>invenio_app()</h1>")
+    L.append("instance_path:"+instance_path)
+    L.append("static_folder:"+static_folder)
+
+    L.append("<h1>flask_current_app</h1>")
+    for k, v in flask_current_app.config.items():
+        L.append("{key} : {value}".format(key=k, value=v))
+
+    return "</br>".join(L)
